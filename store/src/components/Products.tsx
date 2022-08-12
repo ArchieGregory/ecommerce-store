@@ -35,8 +35,7 @@ function Products() {
     }, []);
     console.log("Items nested", products);
     return (
-        <div>
-
+        <div className='Body'>
             {products ? (
                 <div>
                     {products.map((row, index) => (

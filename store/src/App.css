@@ -1,4 +1,6 @@
 .App {
+  display:flex; 
+  flex-direction: row; 
   text-align: center;
 }
 
@@ -25,7 +27,7 @@
 }
 
 .card {
-  width: 250px;
+  width: 180px;
   height: 350;
   border-radius: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -33,5 +35,19 @@
   margin: 20px;
   align-content: 'left';
   text-align: left;
-  padding: 10px
+  padding: 10px;
+}
+
+.Body {
+    width: 75%;
+
+}
+
+.Cart {
+  right: 0;  
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 20px;
 }

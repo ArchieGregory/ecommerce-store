@@ -16,13 +16,11 @@ interface ProductInfoProps {
 
 
 function ProductInfo ({product}: ProductInfoProps) {
-
-
     return (
         <div className='card'>
-            <h1>
+            <h2>
                 {product.item_name}
-            </h1>
+            </h2>
             <p>Weight: {product.item_unit_weight}</p>
             <p>Cost: {product.item_unit_cost}</p>
             <p>Type: {product.type}</p>
