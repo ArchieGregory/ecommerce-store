@@ -1,4 +1,8 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'
+import { addToBasket } from '../features/basket/basketslice';
+
+
 
 
 interface Product {
@@ -16,6 +20,8 @@ interface ProductInfoProps {
 
 
 function ProductInfo ({product}: ProductInfoProps) {
+    const dispatch = useDispatch()
+
     return (
         <div className='card'>
             <h2>
@@ -24,7 +30,9 @@ function ProductInfo ({product}: ProductInfoProps) {
             <p>Weight: {product.item_unit_weight}</p>
             <p>Cost: {product.item_unit_cost}</p>
             <p>Type: {product.type}</p>
-            <button>Add to cart</button> 
+            <button onClick={() => dispatch(addToBasket(product))}>
+                Add to cart
+            </button> 
         </div>
      
 
