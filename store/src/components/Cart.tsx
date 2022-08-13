@@ -14,7 +14,7 @@ interface Summary {
 
 // Helper function to round to 2 decimal points
 function roundTo2Decimals(x: number) {
-    return Math.round(x * 100) / 100
+    return Math.round(x * 100) / 100;
 }
 
 // Helper function to creat cart summary
@@ -47,7 +47,7 @@ function typeSummaries(basket: BasketItem[]) {
 // Cart function, lists basket items, total and summary
 function Cart() {
     // Use Dispatch to modify state, Selectors to view data
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const basket = useSelector((state: any) => state.basket.items);
     const total = useSelector((state: any) => state.basket.total);
 

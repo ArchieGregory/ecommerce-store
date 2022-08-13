@@ -16,7 +16,7 @@ interface ProductInfoProps {
 
 // ProductInfo card.
 function ProductInfo ({product}: ProductInfoProps) {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
     // Render card contents
     return (

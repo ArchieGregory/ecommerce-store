@@ -20,7 +20,7 @@ export interface StateType {
 
 // Helper function to round to 2 decimal points
 function roundTo2Decimals(x: number) {
-    return Math.round(x * 100) / 100
+    return Math.round(x * 100) / 100;
 }
 
 
