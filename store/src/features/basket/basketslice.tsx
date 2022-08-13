@@ -18,6 +18,7 @@ export interface StateType {
     total: number,
 }
 
+// Helper function to round to 2 decimal points
 function roundTo2Decimals(x: number) {
     return Math.round(x * 100) / 100
 }
@@ -34,20 +35,21 @@ export const basketSlice = createSlice({
             const productInBasket = state.items.find((item: BasketItem) => item.product.id === action.payload.id);
             if (productInBasket) {
                 productInBasket.quantity++;
-                state.total = roundTo2Decimals(state.total + productInBasket.product.item_unit_cost)
+                state.total = roundTo2Decimals(state.total + productInBasket.product.item_unit_cost);
 
 
             } else {
                 state.items.push({ product: {...action.payload}, quantity: 1 });
-                state.total = roundTo2Decimals(state.total + action.payload.item_unit_cost)
-
+                state.total = roundTo2Decimals(state.total + action.payload.item_unit_cost);
             }
-
+        },
+        clearBasket: (state: StateType) => {
+            state.items = [];
+            state.total = 0;
         }
     }
 })
 
-// Action creators are generated for each case reducer function
-export const { addToBasket } = basketSlice.actions
+export const { addToBasket, clearBasket } = basketSlice.actions
 
 export default basketSlice.reducer

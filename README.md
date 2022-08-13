@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To begin
 
-
+### `cd store`
 ### `npm start`
 
 Runs the app in the development mode.\
