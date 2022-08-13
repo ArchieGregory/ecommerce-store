@@ -36,9 +36,11 @@ export const basketSlice = createSlice({
                 productInBasket.quantity++;
                 state.total = roundTo2Decimals(state.total + productInBasket.product.item_unit_cost)
 
+
             } else {
                 state.items.push({ product: {...action.payload}, quantity: 1 });
-                state.total += roundTo2Decimals(state.total + action.payload.item_unit_cost)
+                state.total = roundTo2Decimals(state.total + action.payload.item_unit_cost)
+
             }
 
         }

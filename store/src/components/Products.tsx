@@ -22,6 +22,7 @@ function nestItems(productArray: any[], rowLength: number) {
 function Products() {
     const [products, setProducts] = useState<any[]>([])
 
+
     useEffect(() => {
         // Get data 
         const getProducts = async () => {
@@ -35,7 +36,7 @@ function Products() {
     }, []);
     console.log("Items nested", products);
     return (
-        <div className='Body'>
+        <div className='Body' >
             {products ? (
                 <div>
                     {products.map((row, index) => (

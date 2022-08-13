@@ -27,9 +27,12 @@ function ProductInfo ({product}: ProductInfoProps) {
             <h2>
                 {product.item_name}
             </h2>
-            <p>Weight: {product.item_unit_weight}</p>
-            <p>Cost: {product.item_unit_cost}</p>
-            <p>Type: {product.type}</p>
+            <p>
+                Weight: {product.item_unit_weight}<br />
+                Cost: {product.item_unit_cost}<br />
+                Type: {product.type}<br />
+                
+            </p>
             <button onClick={() => dispatch(addToBasket(product))}>
                 Add to cart
             </button> 
